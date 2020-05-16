@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Joc</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+<h1>Joc "Hai sa ne cunoastem" </h1>
+<div id="action" class="text-center">
+	<h1><span class='badge badge-secondary'>----------</span></h1>
+</div>
+<div class="text-center">
+
+<button onclick="generateActionWait()" class="btn btn-danger">Start</button>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+	items = [
+			"<span class='badge badge-primary'>Povesteste despre o carte pe care ai citit-o</span>",
+			"<span class='badge badge-danger'>Ce hobby ai?</span>",
+			"<span class='badge badge-success'>Ce ai invatat nou de cind s-a inceput pandemia?</span>",
+			"<span class='badge badge-warning'>Ce muzica asculti?</span>",
+			"<span class='badge badge-info'>Povesteste despre animalul tau de casa sau ce animal iti place</span>",
+			"<span class='badge badge-dark'>Care este desertul tau preferat?</span>",
+			"<span class='badge badge-secondary'>Care a fost ultima localitate din Moldova pe care ai vizitat-o?</span>"
+			];
+	function getRandomAction() {
+		var item = items[Math.floor(Math.random() * items.length)];
+		return item;
+	}
+
+	function generateActionWait() {
+		myDiv = document.getElementById("action");
+		myDiv.innerHTML = "<img src='game1.gif'>";
+		setTimeout(generateAction, 1400);
+	}
+
+	function generateAction() {
+		myDiv = document.getElementById("action");
+		myDiv.innerHTML = "<h1>" +  getRandomAction() + "</h1>"
+
+	}
+</script>
+</body>
+</html>
