@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Letter - Simple Sign Up Form</title>
+<!-- 
+
+Letter Template 
+
+https://templatemo.com/tm-510-letter
+
+
+
+Template Re-distribution is NOT allowed.
+
+-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="css/demo.css" />
+  <link rel="stylesheet" href="css/templatemo-style.css">
+  
+  <style type="text/css">
+  	.text-20 {
+  		font-size: 6rem;
+  	}	
+  </style>
+
+  <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
+		
+	</head>
+
+	<body>
+
+			<div id="particles-js"></div>
+		
+			<ul class="cb-slideshow">
+	            <li></li>
+	            <li></li>
+	            <li></li>
+	            <li></li>
+	            <li></li>
+	            <li></li>
+	        </ul>
+
+			<div class="container-fluid">
+				<div class="row cb-slideshow-text-container ">
+					<div class= "tm-content col-xl-10 col-sm-10 col-xs-8 mx-auto section  text-center" >
+					<!-- <header class="mb-5"><h1>Hai să ne cunoaştem!</h1></header> -->
+					<P class="mb-5">Hai să ne cunoaştem!</P>
+					<!-- <P class="mb-5">Când ultima data ai scris cod şi pentru ce?</P> -->
+					
+	<!-- 				<div id="action" class="text-center">
+	<h1><span class='badge badge-secondary'>----------</span></h1>
+</div> -->
+                    <!-- <form action="#" method="get" class="subscribe-form"> -->
+               	    	<!-- <div class="row form-section"> -->
+
+							<!-- <div class="col-md-7 col-sm-7 col-xs-7">
+			                      <input name="email" type="text" class="form-control" id="contact_email" placeholder="Your Email..." required/>
+				  			</div> -->
+				  			<div id="action">
+				  				
+				  			</div>
+
+							<div class="col-md-5 col-sm-5 col-xs-5 text-center mx-auto mb-3 mt-5">
+								<button onclick="generateActionWait()" class="tm-btn-subscribe">Start</button>
+							</div>
+
+						<!-- </div> -->
+                    <!-- </form> -->
+                    
+					<!-- <div class="tm-social-icons-container text-xs-center">
+	                    <a href="#" class="tm-social-link"><i class="fa fa-facebook"></i></a>
+	                    <a href="#" class="tm-social-link"><i class="fa fa-google-plus"></i></a>
+	                    <a href="#" class="tm-social-link"><i class="fa fa-twitter"></i></a>
+	                    <a href="#" class="tm-social-link"><i class="fa fa-linkedin"></i></a>
+	                </div> -->
+
+					</div>
+				</div>	
+				<div class="footer-link">
+					<p>Copyright © 2020 GirlsGoIT
+                    
+                    - Design: TemplateMo</p>
+				</div>
+			</div>	
+	</body>
+
+	<script type="text/javascript" src="js/particles.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+
+
+<script type="text/javascript">
+
+	items = [
+				// "<span class='badge badge-primary'>Povesteşte despre o carte pe care ai citit-o</span>",
+				// "<span class='badge badge-danger'>Ce hobby ai?</span>",
+				// "<span class='badge badge-success'>Ce ai învăţat nou de cind s-a inceput pandemia?</span>",
+				// "<span class='badge badge-warning'>Ce muzică îţi place să asculţi?</span>",
+				// "<span class='badge badge-info'>Povesteşte despre animalul tau de casa sau ce animal îţi place</span>",
+				// "<span class='badge badge-dark'>Care este desertul tau preferat?</span>",
+				// "<span class='badge badge-secondary'>Care a fost cea mai recentă localitate din Moldova pe care ai vizitat-o?</span>"
+				"Povesteşte despre o carte pe care ai citit-o",
+				"Ce hobby ai?",
+				"Ce ai învăţat nou de cind s-a inceput pandemia?",
+				"Povesteşte despre animalul tau de casă sau ce animal îţi place",
+				"Care este desertul tau preferat?",
+				"Care a fost cea mai recentă localitate din Moldova pe care ai vizitat-o?",
+				"Când ultima data ai scris cod şi pentru ce?",
+				"Care este/a fost disciplina ta preferată la şcoală?",
+				"Povesteşte despre un profesor/mentor care te-a inspirat",
+				"Ai făcut vreodată volutariat? Povesteşte sau alege altă întrebare",
+				"Cum i-ai explica unui copil mic ce înseamnă să scrii cod?",
+				"Cu cine din participanţi ai făcut cunoştinţă recent?",
+				"Adresează un mesaj unei participante sau catre cineva din mentori",
+				"Ce îţi este mai interesant - de citit o carte sau de scris cod? De ce?",
+				"Ce îţi este mai interesant - de citit o carte sau de făcut o prezentare publică? De ce?",
+				"Ce ai învăţat nou azi?",
+				"Care este mâncarea ta preferată?",
+				"Dacă ai avea o oră în plus azi (25 ore), ce ai face în acest timp?"
+
+			];
+	function getRandomAction() {
+		var item = items[Math.floor(Math.random() * items.length)];
+		return item;
+	}
+
+	function generateActionWait() {
+		myDiv = document.getElementById("action");
+		myDiv.innerHTML = "<img src='game1.gif'>";
+		setTimeout(generateAction, 1000);
+	}
+
+	function generateAction() {
+		myDiv = document.getElementById("action");
+		myDiv.innerHTML = "<h1 class='text-20'>" +  getRandomAction() + "</h1>"
+
+	}
+</script>
+</html>
